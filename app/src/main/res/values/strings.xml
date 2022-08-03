@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Restaurant Rater</string>
+
+    <string name="listview_Name">Restaurant Name</string>
+    <string name="listview_radio_Breakfast">Breakfast</string>
+    <string name="listview_radio_Lunch">Lunch</string>
+    <string name="listview_radio_Dinner">Dinner</string>
+    <string name="activity_view_reviews_Button">Add a New Review</string>
+</resources>

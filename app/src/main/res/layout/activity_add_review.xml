@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddReviewActivity">
+
+    <TextView
+        android:id="@+id/label_restaurant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Restaurant: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edittext_restaurant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="7dp"
+        android:ems="10"
+        android:hint="Enter restaurant name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/edittext_review_date"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/label_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date: "
+        app:layout_constraintBaseline_toBaselineOf="@+id/edittext_review_date"
+        app:layout_constraintEnd_toStartOf="@+id/edittext_review_date"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edittext_review_date"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:inputType="date"
+        app:layout_constraintEnd_toStartOf="@+id/label_time"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/label_date"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_restaurant_name" />
+
+    <TextView
+        android:id="@+id/label_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="Time: "
+        app:layout_constraintEnd_toStartOf="@+id/edittext_review_time"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edittext_review_date"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_restaurant_name" />
+
+    <EditText
+        android:id="@+id/edittext_review_time"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/label_time"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_restaurant_name" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup_meals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:checkedButton="@id/radioButton_breakfast"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/label_rating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton_breakfast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Breakfast" />
+
+        <RadioButton
+            android:id="@+id/radioButton_lunch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lunch" />
+
+        <RadioButton
+            android:id="@+id/radioButton_dinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Dinner" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/label_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Rating"
+        app:layout_constraintBottom_toTopOf="@+id/seekbar_rating"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekbar_rating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkbox_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="121dp"
+        android:text="Add to Favorites"
+        app:layout_constraintEnd_toEndOf="@+id/edittext_review_time"
+        app:layout_constraintStart_toStartOf="@+id/seekbar_rating"
+        app:layout_constraintTop_toBottomOf="@+id/seekbar_rating" />
+
+    <Button
+        android:id="@+id/button_add_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Add Review"
+        app:layout_constraintEnd_toEndOf="@+id/checkbox_favorite"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox_favorite" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
